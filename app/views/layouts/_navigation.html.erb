@@ -1,0 +1,29 @@
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+
+    <%= link_to "ALPHA BLOG", root_path, class:"navbar-brand", id:"logo" %>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>  
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Articles</a>
+          <ul class="dropdown-menu">
+            <%= link_to 'Create a new article', new_article_path,class:"dropdown-item" %>
+            <%= link_to 'View Articles', articles_path,class:"dropdown-item" %>
+            <li><a class="dropdown-item" href="#">A third link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <form class="d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-primary" type="button">Search</button>
+    </form>
+  </div>
+</nav>
