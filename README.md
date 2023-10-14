@@ -1,3 +1,1 @@
-  <% article.errors.full_messages_for(:title).each do |message| %>
-                  <div><%= message %></div>
-                <% end %>
+This is a project that has been made for practice using rails and bootstrap 
