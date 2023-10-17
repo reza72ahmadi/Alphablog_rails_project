@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = Article.paginate(page: params[:page], per_page: 5)
   end
 
   def show
@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params) 
-
+    @article.user = User.first
     if @article.save
       flash[:notice] = 'Article successfuly created'
       redirect_to @article
@@ -48,5 +48,8 @@ class ArticlesController < ApplicationController
     def article_params
       params.require(:article).permit(:title, :body)
     end
+    
 end
+
+
 
