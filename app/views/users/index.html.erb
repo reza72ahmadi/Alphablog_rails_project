@@ -1,4 +1,3 @@
- 
 <div id = 'page-content'>
   <h1 class= 'text-center mt-4'> Alpha Bloggers</h1>
   <div class="container">
@@ -14,7 +13,9 @@
                 <%= link_to gravatar_for(user,size: 150), user%></h5>
               <p class="card-text"> <%= pluralize(user.articles.count, 'article') %></p>
               <%= link_to 'View Profile', user, class:"btn btn-outline-success" %>
-              <%= link_to 'Edit Profile', edit_user_path(user), class:'btn btn-outline-info' %>
+              <%if logged_in? and user == current_user %>
+                <%= link_to 'Edit Profile', edit_user_path(user), class:'btn btn-outline-info' %>
+              <% end%>
             </div>
             <div class="card-footer text-muted">
               <small>Joint <%= time_ago_in_words(user.created_at)%> ago,
