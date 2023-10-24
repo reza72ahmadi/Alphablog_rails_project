@@ -1,2 +1,10 @@
-This is a project that has been made for practice using rails and bootstrap 
 
+
+<div class="text-center">
+   <div class="flicker_pagination">
+    <div class="page_info">
+      <%= page_entries_info @posts %>
+    </div>
+    <%= will_paginate @articles, :container => false %>
+  </div>
+</div>
