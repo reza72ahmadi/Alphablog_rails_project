@@ -16,7 +16,7 @@
             <%= link_to 'Edit profile', edit_user_path(user),class:"btn btn-outline-info" %>
           </div>
           <div class="card-footer text-body-secondary">
-            <small><%=time_ago_in_words(user.created_at) %>
+            Joined <small><%=time_ago_in_words(user.created_at) %>
               <%=time_ago_in_words(user.updated_at) %> ago</small>
           </div>
         </div>

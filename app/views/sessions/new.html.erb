@@ -1,11 +1,8 @@
 <h1 class="text-center mt-4">Login</h1>
-
 <div class="container ">
   <div class="row justify-content-center">
     <div class="con-10">
-     
-     <%= form_with(scope: :session, url: login_path, class: "shadow p-3 mb-3 bg-info rounded", local: true) do |form| %>
-      
+      <%= form_with(scope: :session, url: login_path, class: "shadow p-3 mb-3 bg-info rounded", local: true) do |form| %>
         <div class="form-group row mt-2">
           <%= form.label :email, class:"col-2 col-form-label text-light"  %>
           <div class="col-10">
@@ -22,7 +19,6 @@
         </div>
         <div class="text-center mt-3">
           <%= form.submit"Login" ,class:"btn btn-outline-light btn-lg"%>
-        
         </div>
       <% end %>
     </div>
@@ -30,4 +26,3 @@
       class:"text-center text-primary" %>
   </div>
 </div>
-
